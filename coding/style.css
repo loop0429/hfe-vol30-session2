@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  width: 720px;
+  height: 500px;
+  color: #fff;
+  font-size: 30px;
+  font-family: serif;
+  writing-mode: vertical-rl;
+}
+
+.scene {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.scene-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scene-wrap > * {
+  position: absolute;
+}
+
+.scene01 {
+  z-index: 1;
+}
+
+.scene01 p {
+  top: 56px;
+  left: 574px;
+  opacity: 0;
+  animation: scene01 1s 0.5s forwards;
+}
+
+@keyframes scene01 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.scene02 {
+  z-index: 2;
+}
+
+.scene02 .scene02-img {
+  opacity: 0;
+  filter: blur(16px);
+  animation: scene02 0.5s 2s forwards ease-out;
+}
+
+@keyframes scene02 {
+  0% {
+    opacity: 0;
+    filter: blur(16px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.scene02 .scene02-catch01 {
+  top: 35px;
+  left: 130px;
+  height: 0%;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  animation: scene02-1 0.9s 3s forwards ease-out;
+}
+
+@keyframes scene02-1 {
+  0% {
+    opacity: 0;
+    height: 0%;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+.scene02 .scene02-catch02 {
+  top: 35px;
+  left: 76px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  animation: scene02-1 1s 4.1s forwards ease-out;
+}
+
+@keyframes scene02-1 {
+  0% {
+    opacity: 0;
+    height: 0%;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
